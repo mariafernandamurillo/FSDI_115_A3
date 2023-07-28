@@ -1,0 +1,263 @@
+/*Font*/
+@font-face {
+    font-family: regular;
+    src: url(../fonts/raleway/Raleway-Regular.ttf);
+}
+
+/*Applied to all the elements*/
+* {
+    font-family: regular;
+    font-size: 14px;
+}
+
+/*Text*/
+h1{
+    font-size: 40px;
+    margin: 0px;
+}
+.subheading{
+    font-size: 20px;
+}
+
+.text-s1{
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.text-s2{
+    font-weight: 600;
+}
+
+/*Menu*/
+.menu {
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    align-items: center;
+    justify-content: space-between;
+
+    border: solid 1px rgb(228, 228, 228);
+}
+
+/*Logo*/
+.logo-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.logo {
+    width: 50%;
+
+}
+
+/*Search*/
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+/*In full screen*/
+.search-box {
+    height: 23px;
+    width: 80%;
+}
+
+/*Nav*/
+.nav-container {
+    
+}
+
+.menu-mobile{
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.a-primary {
+    background-color: rgb(241, 241, 241);
+    height: 30px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.a-primary:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+/*Banner*/
+.banner-img{
+    width: 100%;
+    height: 500px;
+}
+
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-evenly;
+    height: 150px;
+    position: absolute;
+    top: 180px;
+    left: 30px;
+    padding: 20px;
+}
+
+/*Events*/
+.events-for-you{
+    margin: 30px 0px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.events-list{
+    display: grid;
+    grid-template-columns: repeat(4, 300px); /* Three columns of 100px each */
+    grid-gap: 0px 30px;
+    justify-content: center;
+}
+
+.event-container{
+    width: 100%;
+    height: 250px;
+    border: solid 1px rgb(219, 219, 219);
+    margin: 20px 10px;
+}
+
+.event-img{
+    width: 100%;
+    height: 150px;
+}
+
+.event-data{
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-categories{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/*Buttons*/
+.btn-primary {
+    width: 150px;
+    height: 30px;
+    border: none;
+    margin:0px 20px;
+}
+
+.btn-primary:hover {
+    background-color: rgb(219, 219, 219);
+}
+
+/*Responsiveness*/
+
+/*Mobile view*/
+@media(max-width:640px){
+
+    /**/
+    .menu{
+        grid-template-columns: 1fr 3fr 1fr;
+    }
+    
+    nav{
+        display: none;
+    }
+
+    .search-box{
+        display: none;
+    }
+
+    .nav-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    .menu-mobile{
+        display:inline;  
+        background-color: unset;
+        border: 0px; 
+    }
+
+    .search-icon{
+        font-size: 0px;
+        width: 25%;
+        background-color:unset;
+    }
+
+    .events-for-you{
+        margin: 0px;
+    }
+
+    .events-list{
+        display: flex; 
+        flex-direction: column;
+    }
+
+    .event-container{
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .menu-categories{
+        margin: 30px 0px;
+        display: grid;
+        grid-template-columns: repeat(2, 180px);
+        grid-gap: 30px 0px;
+        justify-content: center;
+    }
+
+}
+
+/*Tablet view*/
+@media((min-width: 641px) and (max-width: 1090px)){
+
+    .nav-container{
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    nav a:first-child{
+        display: none;
+    }
+    
+    .a-primary{
+        width: 80px;
+        margin: 0px 5px;
+    }
+
+    .menu-mobile{
+        display:inline;  
+        border: 0px; 
+        background-color: unset;
+    }
+
+    .events-for-you{
+        margin: 0px;
+    }
+    
+    .events-list{
+        grid-template-columns: repeat(2, 300px); 
+    }
+
+    .menu-categories{
+        margin: 30px 0px;
+        display: grid;
+        grid-template-columns: repeat(3, 180px);
+        grid-gap: 30px 0px;
+        justify-content: center;
+    }
+}
